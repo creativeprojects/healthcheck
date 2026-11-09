@@ -3,7 +3,7 @@ name: Publish image
 on:
   workflow_dispatch:
   schedule:
-    - cron: '46 8 * * 0'
+    - cron: '46 22 * * 5'
   push:
     branches:
       - main
