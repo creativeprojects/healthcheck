@@ -9,7 +9,7 @@ WORKDIR /app
 
 # Copy source and build static binary
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app/healthcheck .
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /app/healthcheck .
 
 # Stage 2: Minimal Runtime
 FROM scratch
